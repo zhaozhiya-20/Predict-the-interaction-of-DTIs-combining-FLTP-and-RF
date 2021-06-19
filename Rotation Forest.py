@@ -118,7 +118,7 @@ def model_worth(models, r_matrices, x, y):
     P = []
     for i, model in enumerate(models):
         x_mod = x.dot(r_matrices[i])
-        score = model.predict_proba(x_mod)
+        
         predicted_y = model.predict(x_mod)  # Predict the results
 
         # print("score.shape:", score[1, 0:2])
